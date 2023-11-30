@@ -1,0 +1,7 @@
+train: ./VOCdata/train.txt
+val: ./VOCdata/val.txt
+test: ./VOCdata/test.txt
+# number of classes
+nc: 2   # 修改為自己的類別數量
+# class names
+names: ["shuttle"," "]

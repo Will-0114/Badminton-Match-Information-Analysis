@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QSlider
+
+{
+
+    background-color: #ff00ff;
+
+border-style: outset;
+
+border-radius: 5px;
+
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{background-color:GRAY}</string>
+   </property>
+   <widget class="QTabWidget" name="control_widget">
+    <property name="geometry">
+     <rect>
+      <x>1360</x>
+      <y>10</y>
+      <width>550</width>
+      <height>960</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab_load_file">
+     <property name="styleSheet">
+      <string notr="true">QWidget{background-color:white}</string>
+     </property>
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QLabel" name="label_filepath">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>421</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>File Name</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_openfile">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>Openfile</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shuttle_label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>512</width>
+        <height>288</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:WHITE;
+
+border-style: outset;
+
+border-radius: 10px;
+
+border: 3px solid #000000;}</string>
+      </property>
+      <property name="text">
+       <string>Shuttle</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>261</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Region Datect Model</string>
+      </property>
+      <widget class="QWidget" name="formLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>211</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>50</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="radioButton_CCOEFF">
+          <property name="text">
+           <string>CCOEFF</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="radioButton_NORM_CCOEFF">
+          <property name="text">
+           <string>NORM_CCOEFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QRadioButton" name="radioButton_CCORR">
+          <property name="text">
+           <string>CCORR</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="radioButton_SQDIFF">
+          <property name="text">
+           <string>SQDIFF</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QRadioButton" name="radioButton_NORM_SQDIFF">
+          <property name="text">
+           <string>NORM_SQDIFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QRadioButton" name="radioButton_NORM_CCORR">
+          <property name="text">
+           <string>NORM_CCORR</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_load_model">
+     <property name="styleSheet">
+      <string notr="true">QWidget{background-color:white}</string>
+     </property>
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QPushButton" name="button_openmodel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>LoadModel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_model_name">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>421</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>yolov5 Model Name</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="SpinBox_Conf">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>0.990000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Conf&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Iou&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="SpinBox_Iou">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>170</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>0.990000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.200000000000000</double>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>510</y>
+        <width>251</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QCheckBox" name="checkBox_Region">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Region Detect</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_OCR">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>90</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OCR Detext</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_Object">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>140</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Object Detect</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_Pose">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>190</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pose Detect</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="button_openposemodel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>101</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>LoadModel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pose_model_name">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>230</y>
+        <width>421</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>Openpose Model Name</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_mobilenetmodel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>330</y>
+        <width>101</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>LoadModel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_mobilenet_model_name">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>330</y>
+        <width>421</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:#BEBEBE}</string>
+      </property>
+      <property name="text">
+       <string>Mobilenet Model Name</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="vision_widget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>1330</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Main_player">
+     <property name="styleSheet">
+      <string notr="true">QWidget{background-color:white}</string>
+     </property>
+     <attribute name="title">
+      <string>Main</string>
+     </attribute>
+     <widget class="QLabel" name="label_videoframe">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>1280</width>
+        <height>720</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{background-color:WHITE;
+
+border-style: outset;
+
+border-radius: 10px;
+
+border: 3px solid #000000;}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt; font-weight:600;&quot;&gt;Video Player&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QSlider" name="slider_videoframe">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>750</y>
+        <width>1031</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider
+
+{
+
+    background-color: #000000;
+
+border-style: outset;
+
+border-radius: 10px;
+
+}
+QSlider::groove:horizontal
+
+{
+height: 12px;
+
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f1f1f1, stop:1 #b1b1b1);
+
+margin: 3px 0
+
+}
+QSlider::handle:horizontal
+
+{
+
+background: QRadialGradient(cx:0, cy:0, radius: 1, fx:0.5, fy:0.5, stop:0 white, stop:1 black);
+
+width: 16px;
+
+height: 16px;
+
+margin: -5px 6px -5px 6px;
+
+border-radius:11px;
+
+border: 3px solid #c1ffff;
+
+}
+
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_framecnt">
+      <property name="geometry">
+       <rect>
+        <x>1190</x>
+        <y>750</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;00:00:00/00:00:00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_play">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>739</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:rgba(255, 255, 127, 0)}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icon/play.png</normaloff>../icon/play.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_stop">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>740</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:rgba(255, 255, 127, 0)}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icon/restart.png</normaloff>../icon/restart.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="RGB_player">
+     <property name="styleSheet">
+      <string notr="true">QWidget{background-color:white}</string>
+     </property>
+     <attribute name="title">
+      <string>Competition Information</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1291</width>
+        <height>771</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>Time</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Player1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Player2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>First</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Second</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Third</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Match_Score</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>button_stop</tabstop>
+  <tabstop>button_play</tabstop>
+  <tabstop>slider_videoframe</tabstop>
+  <tabstop>vision_widget</tabstop>
+  <tabstop>button_openfile</tabstop>
+  <tabstop>control_widget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
